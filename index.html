@@ -14,18 +14,9 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Added scroll snapping behavior */
-        html {
-            scroll-snap-type: y mandatory;
-            scroll-padding-top: 80px; /* Offset for the fixed header */
-        }
-        main > section {
-            scroll-snap-align: start;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+        /*
+        The CSS rules for scroll-snapping have been removed from here.
+        */
         .gradient-text {
             background: linear-gradient(90deg, #3B82F6, #8B5CF6);
             -webkit-background-clip: text;
@@ -69,7 +60,6 @@
 
 <body class="bg-slate-50 text-slate-800">
 
-    <!-- Header -->
     <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm transition-shadow duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold gradient-text">SDS</a>
@@ -82,7 +72,6 @@
                 <i data-lucide="menu" class="h-6 w-6 text-slate-800"></i>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white/80 backdrop-blur-md">
             <a href="#about" class="block py-2 text-slate-600 hover:text-blue-500">About</a>
             <a href="#projects" class="block py-2 text-slate-600 hover:text-blue-500">Projects</a>
@@ -90,9 +79,8 @@
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="text-center">
+    <main class="pt-24 md:pt-32">
+        <section id="hero" class="text-center py-20">
             <div class="container mx-auto px-6">
                 <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
                     Hi, I'm <span class="gradient-text">Surya Sudhakar</span>
@@ -110,8 +98,7 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about">
+        <section id="about" class="py-20">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
                 <div class="grid md:grid-cols-5 gap-12 items-center">
@@ -143,13 +130,11 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
+        <section id="projects" class="py-20">
              <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center mb-12">My Projects</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <!-- Project Card 1 -->
                     <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
                         <img src="https://placehold.co/600x400/94A3B8/ffffff?text=Project+1" alt="Project 1" class="w-full h-48 object-cover" loading="lazy">
                         <div class="p-6">
@@ -167,7 +152,6 @@
                         </div>
                     </div>
 
-                    <!-- Project Card 2 -->
                     <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
                         <img src="https://placehold.co/600x400/A3BFFA/ffffff?text=Project+2" alt="Project 2" class="w-full h-48 object-cover" loading="lazy">
                         <div class="p-6">
@@ -184,7 +168,6 @@
                         </div>
                     </div>
                     
-                    <!-- Project Card 3 -->
                     <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
                         <img src="https://placehold.co/600x400/FACC15/ffffff?text=Project+3" alt="Project 3" class="w-full h-48 object-cover" loading="lazy">
                         <div class="p-6">
@@ -205,8 +188,7 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-bg text-center">
+        <section id="contact" class="contact-bg text-center py-20">
              <div class="container mx-auto px-6">
                  <h2 class="text-4xl font-bold text-center mb-4">Get In Touch</h2>
                  <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">I'm currently open to new opportunities and collaborations. Feel free to send me an email, and I'll get back to you as soon as possible!</p>
@@ -218,7 +200,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="bg-slate-100 border-t border-slate-200">
         <div class="container mx-auto px-6 py-8 text-center text-slate-500">
             <p>&copy; 2025 Surya Datta Sudhakar. All rights reserved.</p>
@@ -256,4 +237,3 @@
     </script>
 </body>
 </html>
-
