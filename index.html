@@ -27,8 +27,18 @@
 <body class="bg-slate-50 text-slate-800">
 
     <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm transition-shadow duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold gradient-text">SDS</a>
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="#" class="text-2xl font-bold gradient-text">SDS</a>
+                <div class="flex items-center gap-3 border-l border-slate-200 pl-4">
+                     <a href="https://iisc.ac.in" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/IISc_logo.png" alt="IISc Logo" class="h-9 w-auto" title="Indian Institute of Science">
+                     </a>
+                     <a href="https://iisc.ac.in" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/IISc110.jpg" alt="IISc Main Building" class="h-9 w-auto rounded-md hidden md:block" title="Indian Institute of Science">
+                     </a>
+                </div>
+            </div>
             <nav class="hidden md:flex space-x-8">
                 <a href="#about" class="text-slate-600 hover:text-blue-500 transition duration-300">About</a>
                 <a href="#experience" class="text-slate-600 hover:text-blue-500 transition duration-300">Experience</a>
@@ -80,23 +90,34 @@
         <section id="about" class="py-20">
             <div class="container mx-auto px-6">
                  <h2 class="text-4xl font-bold text-center mb-16">About Me</h2>
-                <div class="grid lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
-                    <div class="lg:col-span-2 space-y-6 text-lg text-slate-600">
-                        <h3 class="text-3xl font-bold text-slate-800">My Story</h3>
+                <div class="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mb-16">
+                    <div class="space-y-6 text-lg text-slate-600">
                         <p>As an engineer focused on solving fundamental scientific problems through code, my mission is to build the next generation of computational tools. I leverage my background in Computational and Data Sciences and my expertise in Scientific Machine Learning to create solutions for high-stakes challenges, whether in the depths of the ocean or at the frontiers of aerospace propulsion.</p>
                         <p>I am driven by a profound curiosity for how things work, a passion I indulge through continuous learning. When I'm not engineering solutions, I am into star gazing or watching documentaries, falling in awe with the universe's vast complexities. On other days, you can find me exploring new tea shops or stationery.</p>
                     </div>
-                    <div class="lg:col-span-1 space-y-8">
+                    <div>
                          <img src="assets/jetplane.jpg" alt="A modern jet plane in the sky" class="rounded-xl w-full object-cover shadow-lg">
-                         <div>
-                            <h3 class="text-2xl font-bold text-slate-800 mb-4">Outside of Code</h3>
-                            <ul class="space-y-3 text-slate-600">
-                                <li class="flex items-center"><i data-lucide="telescope" class="h-5 w-5 mr-3 text-blue-500"></i>Star Gazing</li>
-                                <li class="flex items-center"><i data-lucide="film" class="h-5 w-5 mr-3 text-blue-500"></i>Watching Documentaries</li>
-                                <li class="flex items-center"><i data-lucide="coffee" class="h-5 w-5 mr-3 text-blue-500"></i>Exploring Tea Shops</li>
-                                <li class="flex items-center"><i data-lucide="pen-tool" class="h-5 w-5 mr-3 text-blue-500"></i>Stationery Enthusiast</li>
-                            </ul>
-                         </div>
+                    </div>
+                </div>
+                <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="text-3xl font-bold text-slate-800 mb-6">Outside of Code</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-8 max-w-2xl mx-auto">
+                        <div class="flex items-center text-slate-600 text-lg">
+                            <i data-lucide="telescope" class="h-5 w-5 mr-3 text-blue-500 flex-shrink-0"></i>
+                            <span>Star Gazing</span>
+                        </div>
+                        <div class="flex items-center text-slate-600 text-lg">
+                            <i data-lucide="film" class="h-5 w-5 mr-3 text-blue-500 flex-shrink-0"></i>
+                            <span>Documentaries</span>
+                        </div>
+                        <div class="flex items-center text-slate-600 text-lg">
+                            <i data-lucide="coffee" class="h-5 w-5 mr-3 text-blue-500 flex-shrink-0"></i>
+                            <span>Tea Shops</span>
+                        </div>
+                        <div class="flex items-center text-slate-600 text-lg">
+                            <i data-lucide="pen-tool" class="h-5 w-5 mr-3 text-blue-500 flex-shrink-0"></i>
+                            <span>Stationery</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,45 +126,81 @@
         <section id="experience" class="py-20 bg-slate-100">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center mb-16">Experience & Education</h2>
-                <div class="relative max-w-3xl mx-auto pl-8 border-l-2 border-slate-300">
+                <div class="relative max-w-4xl mx-auto pl-8 border-l-2 border-slate-300">
                     <!-- Education -->
                     <div class="mb-12 relative timeline-item">
-                        <h3 class="text-2xl font-bold text-slate-800">M.Tech. in Computational and Data Sciences</h3>
-                        <p class="text-slate-600 font-medium mb-1">Indian Institute of Science, Bengaluru</p>
-                        <p class="text-slate-500 mb-2">Aug. 2024 -- Present</p>
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <img src="assets/IISc_logo.png" alt="IISc Logo" class="w-16 h-16 object-contain rounded-md bg-white p-1 shadow-md">
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-800">M.Tech. in Computational and Data Sciences</h3>
+                                <p class="text-slate-600 font-medium mb-1">Indian Institute of Science, Bengaluru</p>
+                                <p class="text-slate-500 mb-2">Aug. 2024 -- Present</p>
+                            </div>
+                        </div>
                     </div>
                      <!-- Experience -->
                     <div class="mb-12 relative timeline-item">
-                        <h3 class="text-2xl font-bold text-slate-800">Project Scientist - I</h3>
-                        <p class="text-slate-600 font-medium mb-1">INCOIS, Ministry of Earth Sciences</p>
-                        <p class="text-slate-500 mb-2">Dec. 2022 -- July 2024</p>
-                        <ul class="list-disc pl-5 space-y-1 text-slate-600">
-                            <li>Developed a decision support system for the Tsunami Early Warning System using Python and JavaScript.</li>
-                            <li>Streamlined data processing from ADCIRC simulations on HPC clusters.</li>
-                            <li>Created a marine energy atlas for India based on satellite and model data.</li>
-                        </ul>
+                         <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <img src="assets/incois_logo.jpg" alt="INCOIS Logo" class="w-16 h-16 object-contain rounded-md bg-white p-1 shadow-md">
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-800">Project Scientist - I</h3>
+                                <p class="text-slate-600 font-medium mb-1">INCOIS, Ministry of Earth Sciences</p>
+                                <p class="text-slate-500 mb-2">Dec. 2022 -- July 2024</p>
+                                <ul class="list-disc pl-5 space-y-1 text-slate-600">
+                                    <li>Developed a decision support system for the Tsunami Early Warning System using Python and JavaScript.</li>
+                                    <li>Streamlined data processing from ADCIRC simulations on HPC clusters.</li>
+                                    <li>Created a marine energy atlas for India based on satellite and model data.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="mb-12 relative timeline-item">
-                        <h3 class="text-2xl font-bold text-slate-800">Assistant Systems Engineer</h3>
-                        <p class="text-slate-600 font-medium mb-1">TATA Consultancy Services</p>
-                        <p class="text-slate-500 mb-2">Jan. 2021 -- Mar. 2022</p>
-                         <ul class="list-disc pl-5 space-y-1 text-slate-600">
-                            <li>Worked with Qualcomm's Modem-FW-Test team on 4G-LTE technologies.</li>
-                            <li>Developed test scenarios using an internal Python framework.</li>
-                            <li>Trained a batch of 30 freshers in programming with Python.</li>
-                        </ul>
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <img src="assets/tcs_logo.png" alt="TCS Logo" class="w-16 h-16 object-contain rounded-md bg-white p-1 shadow-md">
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-800">Assistant Systems Engineer</h3>
+                                <p class="text-slate-600 font-medium mb-1">TATA Consultancy Services</p>
+                                <p class="text-slate-500 mb-2">Jan. 2021 -- Mar. 2022</p>
+                                 <ul class="list-disc pl-5 space-y-1 text-slate-600">
+                                    <li>Worked with Qualcomm's Modem-FW-Test team on 4G-LTE technologies.</li>
+                                    <li>Developed test scenarios using an internal Python framework.</li>
+                                    <li>Trained a batch of 30 freshers in programming with Python.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                      <!-- Education -->
                     <div class="mb-12 relative timeline-item">
-                        <h3 class="text-2xl font-bold text-slate-800">B.E. in Mechanical Engineering</h3>
-                        <p class="text-slate-600 font-medium mb-1">Osmania University, Hyderabad</p>
-                        <p class="text-slate-500 mb-2">Aug. 2016 -- Oct. 2020</p>
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <img src="assets/Osmania_University_Logo.png" alt="Osmania University Logo" class="w-16 h-16 object-contain rounded-md bg-white p-1 shadow-md">
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-800">B.E. in Mechanical Engineering</h3>
+                                <p class="text-slate-600 font-medium mb-1">Osmania University, Hyderabad</p>
+                                <p class="text-slate-500 mb-2">Aug. 2016 -- Oct. 2020</p>
+                            </div>
+                        </div>
                     </div>
                     <!-- Internships -->
                     <div class="mb-12 relative timeline-item">
-                        <h3 class="text-2xl font-bold text-slate-800">Summer Internships</h3>
-                        <p class="text-slate-600 font-medium mb-1">Bharat Heavy Electricals Ltd. (BHEL) & AP Power Generation Co.</p>
-                        <p class="text-slate-500 mb-2">June 2019 & June 2018</p>
+                        <div class="flex items-start gap-6">
+                             <div class="flex-shrink-0 flex items-center space-x-2">
+                                <img src="assets/BHEL_logo.png" alt="BHEL Logo" class="w-12 h-12 object-contain rounded-md bg-white p-1 shadow-sm">
+                                <img src="assets/apgenco.jpg" alt="APGENCO Logo" class="w-12 h-12 object-contain rounded-md bg-white p-1 shadow-sm">
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-800">Summer Internships</h3>
+                                <p class="text-slate-600 font-medium mb-1">Bharat Heavy Electricals Ltd. (BHEL) & AP Power Generation Co.</p>
+                                <p class="text-slate-500 mb-2">June 2019 & June 2018</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
