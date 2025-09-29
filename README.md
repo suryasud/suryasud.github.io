@@ -4,7 +4,7 @@ This repository contains the source code for my personal portfolio website, desi
 ### Features
 - Responsive Design: Adapts seamlessly to desktops, tablets, and mobile phones.
 - Interactive UI: Smooth scrolling, hover effects, and a mobile-friendly navigation menu.
-- Dynamic Content Sections: Dedicated sections for an introduction (Hero), About Me, Experience & Education, Projects, Publications, and Skills.
+- Dynamic Content Sections: Dedicated sections for an introduction, about me, experience & education, projects, publications, and skills.
 - Single Page Architecture: Most content is available on a single, easy-to-navigate page, with an additional details.html for future expansion.
 - External Assets: All images are organized in an /assets folder for easy management.
 
