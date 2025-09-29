@@ -4,58 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surya Sudhakar - Developer Portfolio</title>
+    <title>Surya Sudhakar - Portfolio</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /*
-        The CSS rules for scroll-snapping have been removed from here.
-        */
-        .gradient-text {
-            background: linear-gradient(90deg, #3B82F6, #8B5CF6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .skill-badge {
-            transition: all 0.2s ease-in-out;
-        }
-        .skill-badge:hover {
-            transform: scale(1.1);
-            background-color: #3B82F6;
-            color: white;
-        }
-        /* Style for the contact section background */
-        .contact-bg {
-            position: relative;
-            color: white;
-            background-color: #0f172a; /* Fallback color */
-        }
-        .contact-bg::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('rocket1.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Parallax effect */
-            filter: brightness(0.5); /* Darken the image */
-            z-index: 1;
-        }
-        .contact-bg .container { /* Ensure content is above the pseudo-element */
-            position: relative;
-            z-index: 2;
-        }
-    </style>
+
+    <!-- External JavaScript with defer -->
+    <script src="script.js" defer></script>
 </head>
 
 <body class="bg-slate-50 text-slate-800">
@@ -65,7 +31,10 @@
             <a href="#" class="text-2xl font-bold gradient-text">SDS</a>
             <nav class="hidden md:flex space-x-8">
                 <a href="#about" class="text-slate-600 hover:text-blue-500 transition duration-300">About</a>
+                <a href="#experience" class="text-slate-600 hover:text-blue-500 transition duration-300">Experience</a>
                 <a href="#projects" class="text-slate-600 hover:text-blue-500 transition duration-300">Projects</a>
+                <a href="#publications" class="text-slate-600 hover:text-blue-500 transition duration-300">Publications</a>
+                <a href="details.html" class="text-slate-600 hover:text-blue-500 transition duration-300">Details</a>
                 <a href="#contact" class="text-slate-600 hover:text-blue-500 transition duration-300">Contact</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden">
@@ -74,7 +43,10 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white/80 backdrop-blur-md">
             <a href="#about" class="block py-2 text-slate-600 hover:text-blue-500">About</a>
+            <a href="#experience" class="block py-2 text-slate-600 hover:text-blue-500">Experience</a>
             <a href="#projects" class="block py-2 text-slate-600 hover:text-blue-500">Projects</a>
+            <a href="#publications" class="block py-2 text-slate-600 hover:text-blue-500">Publications</a>
+            <a href="details.html" class="block py-2 text-slate-600 hover:text-blue-500">Details</a>
             <a href="#contact" class="block py-2 text-slate-600 hover:text-blue-500">Contact</a>
         </div>
     </header>
@@ -85,7 +57,7 @@
                 <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
                     Hi, I'm <span class="gradient-text">Surya Sudhakar</span>
                 </h1>
-                <p class="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto">A passionate engineer using scientific machine learning to decode complex physical phenomena and build the next generation of computational tools.</p>
+                <p class="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto">An engineer using scientific machine learning to decode complex physical phenomena and build the next generation of computational tools.</p>
                 <div class="flex justify-center items-center space-x-4">
                     <a href="mailto:suryas@iisc.ac.in" class="bg-blue-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-600 transition duration-300 shadow-md">Get In Touch</a>
                     <a href="https://github.com/suryasud" target="_blank" rel="noopener noreferrer" class="text-slate-700 hover:text-blue-500 transition duration-300">
@@ -100,31 +72,71 @@
 
         <section id="about" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
-                <div class="grid md:grid-cols-5 gap-12 items-center">
-                    <div class="md:col-span-2">
-                        <img src="https://placehold.co/400x400/E2E8F0/475569?text=Your+Photo" alt="Surya Sudhakar" class="rounded-full mx-auto w-48 h-48 md:w-64 md:h-64 object-cover shadow-lg" loading="lazy">
-                    </div>
-                    <div class="md:col-span-3 text-lg text-slate-600 space-y-4">
+                 <h2 class="text-4xl font-bold text-center mb-16">About Me</h2>
+                <div class="grid lg:grid-cols-3 gap-12">
+                    <div class="lg:col-span-2 space-y-6 text-lg text-slate-600">
+                        <h3 class="text-3xl font-bold text-slate-800">My Story</h3>
                         <p>As an engineer focused on solving fundamental scientific problems through code, my mission is to build the next generation of computational tools. I leverage my background in Computational and Data Sciences and my expertise in Scientific Machine Learning to create solutions for high-stakes challenges, whether in the depths of the ocean or at the frontiers of aerospace propulsion.</p>
-                        <p>I am driven by a profound curiosity for how things work, a passion I indulge through continuous learning. When I'm not engineering solutions, I am into star gazing or watching documentaries, falling in awe with the universe's vast complexities. On other days, you can find me exploring a new tea shops or stationery.</p>
-                        <div class="mt-6">
-                            <a href="about.html" class="inline-block bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300 shadow-sm">
-                                Learn More About Me
-                           </a>
-                        </div>
-                        <div class="mt-8">
-                            <h3 class="text-2xl font-semibold text-slate-800 mb-4">My Skills</h3>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">Python</span>
-                                <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">C++</span>
-                                <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">Java</span>
-                                <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">HTML5</span>
-                                <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">SQL</span>
-                                <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">Tailwind CSS</span>
-                                <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">Docker</span>
-                            </div>
-                        </div>
+                        <p>I am driven by a profound curiosity for how things work, a passion I indulge through continuous learning. When I'm not engineering solutions, I am into star gazing or watching documentaries, falling in awe with the universe's vast complexities. On other days, you can find me exploring new tea shops or stationery.</p>
+                    </div>
+                    <div class="lg:col-span-1 space-y-8">
+                         <img src="assets/your-photo.png" alt="Surya Datta Sudhakar" class="rounded-xl w-full object-cover shadow-lg">
+                         <div>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-4">Outside of Code</h3>
+                            <ul class="space-y-3 text-slate-600">
+                                <li class="flex items-center"><i data-lucide="telescope" class="h-5 w-5 mr-3 text-blue-500"></i>Star Gazing</li>
+                                <li class="flex items-center"><i data-lucide="film" class="h-5 w-5 mr-3 text-blue-500"></i>Watching Documentaries</li>
+                                <li class="flex items-center"><i data-lucide="coffee" class="h-5 w-5 mr-3 text-blue-500"></i>Exploring Tea Shops</li>
+                                <li class="flex items-center"><i data-lucide="pen-tool" class="h-5 w-5 mr-3 text-blue-500"></i>Stationery Enthusiast</li>
+                            </ul>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-20 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16">Experience & Education</h2>
+                <div class="relative max-w-3xl mx-auto pl-8 border-l-2 border-slate-300">
+                    <!-- Education -->
+                    <div class="mb-12 relative timeline-item">
+                        <h3 class="text-2xl font-bold text-slate-800">M.Tech. in Computational and Data Sciences</h3>
+                        <p class="text-slate-600 font-medium mb-1">Indian Institute of Science, Bengaluru</p>
+                        <p class="text-slate-500 mb-2">Aug. 2024 -- Present</p>
+                    </div>
+                     <!-- Experience -->
+                    <div class="mb-12 relative timeline-item">
+                        <h3 class="text-2xl font-bold text-slate-800">Project Scientist - I</h3>
+                        <p class="text-slate-600 font-medium mb-1">INCOIS, Ministry of Earth Sciences</p>
+                        <p class="text-slate-500 mb-2">Dec. 2022 -- July 2024</p>
+                        <ul class="list-disc pl-5 space-y-1 text-slate-600">
+                            <li>Developed a decision support system for the Tsunami Early Warning System using Python and JavaScript.</li>
+                            <li>Streamlined data processing from ADCIRC simulations on HPC clusters.</li>
+                            <li>Created a marine energy atlas for India based on satellite and model data.</li>
+                        </ul>
+                    </div>
+                    <div class="mb-12 relative timeline-item">
+                        <h3 class="text-2xl font-bold text-slate-800">Assistant Systems Engineer</h3>
+                        <p class="text-slate-600 font-medium mb-1">TATA Consultancy Services</p>
+                        <p class="text-slate-500 mb-2">Jan. 2021 -- Mar. 2022</p>
+                         <ul class="list-disc pl-5 space-y-1 text-slate-600">
+                            <li>Worked with Qualcomm's Modem-FW-Test team on 4G-LTE technologies.</li>
+                            <li>Developed test scenarios using an internal Python framework.</li>
+                            <li>Trained a batch of 30 freshers in programming with Python.</li>
+                        </ul>
+                    </div>
+                     <!-- Education -->
+                    <div class="mb-12 relative timeline-item">
+                        <h3 class="text-2xl font-bold text-slate-800">B.E. in Mechanical Engineering</h3>
+                        <p class="text-slate-600 font-medium mb-1">Osmania University, Hyderabad</p>
+                        <p class="text-slate-500 mb-2">Aug. 2016 -- Oct. 2020</p>
+                    </div>
+                    <!-- Internships -->
+                    <div class="mb-12 relative timeline-item">
+                        <h3 class="text-2xl font-bold text-slate-800">Summer Internships</h3>
+                        <p class="text-slate-600 font-medium mb-1">Bharat Heavy Electricals Ltd. (BHEL) & AP Power Generation Co.</p>
+                        <p class="text-slate-500 mb-2">June 2019 & June 2018</p>
                     </div>
                 </div>
             </div>
@@ -132,58 +144,100 @@
 
         <section id="projects" class="py-20">
              <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-12">My Projects</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     
                     <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
-                        <img src="https://placehold.co/600x400/94A3B8/ffffff?text=Project+1" alt="Project 1" class="w-full h-48 object-cover" loading="lazy">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2">E-commerce Platform</h3>
-                            <p class="text-slate-600 mb-4">A full-featured online store with product listings, a shopping cart, and a checkout process.</p>
+                            <h3 class="text-2xl font-bold mb-2">Transfer Learning for Turbulence Generalization</h3>
+                            <p class="text-slate-600 mb-4">Implemented transfer learning to improve the generalization of SGS models for turbulence modeling.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">React</span>
-                                <span class="text-sm bg-green-100 text-green-800 px-2 py-1 rounded">Node.js</span>
-                                <span class="text-sm bg-yellow-100 text-yellow-800 px-2 py-1 rounded">MongoDB</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="font-medium text-blue-500 hover:underline">Live Demo</a>
-                                <a href="#" class="font-medium text-slate-500 hover:underline">Source Code</a>
+                                <span class="skill-badge text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Python</span>
+                                <span class="skill-badge text-sm bg-red-100 text-red-800 px-2 py-1 rounded">TensorFlow</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
-                        <img src="https://placehold.co/600x400/A3BFFA/ffffff?text=Project+2" alt="Project 2" class="w-full h-48 object-cover" loading="lazy">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2">Task Management App</h3>
-                            <p class="text-slate-600 mb-4">A collaborative tool for teams to manage tasks, set deadlines, and track progress.</p>
+                            <h3 class="text-2xl font-bold mb-2">Reacting Flow Solver</h3>
+                            <p class="text-slate-600 mb-4">Developed a 0D/1D reacting flow solver in C++ to simulate combustion using 9 species and 21 reactions.</p>
                                <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="text-sm bg-purple-100 text-purple-800 px-2 py-1 rounded">Vue.js</span>
-                                <span class="text-sm bg-red-100 text-red-800 px-2 py-1 rounded">Firebase</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="font-medium text-blue-500 hover:underline">Live Demo</a>
-                                <a href="#" class="font-medium text-slate-500 hover:underline">Source Code</a>
+                                <span class="skill-badge text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded">C++</span>
+                                <span class="skill-badge text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Python</span>
+                                <span class="skill-badge text-sm bg-green-100 text-green-800 px-2 py-1 rounded">Git</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
-                        <img src="https://placehold.co/600x400/FACC15/ffffff?text=Project+3" alt="Project 3" class="w-full h-48 object-cover" loading="lazy">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2">Personal Blog</h3>
-                            <p class="text-slate-600 mb-4">A clean, minimalist blog platform built with a static site generator for performance.</p>
+                            <h3 class="text-2xl font-bold mb-2">GPU-based DNS N-S Solver</h3>
+                            <p class="text-slate-600 mb-4">Developed a 2D pseudo-spectral DNS solver in Python to simulate decaying 2D turbulence, leveraging GPU computation via PyTorch.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="text-sm bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Gatsby</span>
-                                <span class="text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded">GraphQL</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="font-medium text-blue-500 hover:underline">Live Demo</a>
-                                <a href="#" class="font-medium text-slate-500 hover:underline">Source Code</a>
+                                <span class="skill-badge text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Python</span>
+                                <span class="skill-badge text-sm bg-orange-100 text-orange-800 px-2 py-1 rounded">PyTorch</span>
+                                <span class="skill-badge text-sm bg-green-100 text-green-800 px-2 py-1 rounded">Git</span>
                             </div>
                         </div>
                     </div>
 
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Two-Phase Flow Heat Transfer Analysis</h3>
+                            <p class="text-slate-600 mb-4">Analyzed the effects of heat transfer in two-phase fluid flow using the Drift-Flux model for simulation.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-badge text-sm bg-red-100 text-red-800 px-2 py-1 rounded">Ansys Fluent</span>
+                                <span class="skill-badge text-sm bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Matlab</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="py-20 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Publications</h2>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <p class="text-slate-600">S. Jha, <strong class="text-slate-800">S. D. Sudhakar</strong>, S. Majumder, et al. (2024). A multidecadal study of the Malabar upwelling system influencing Indian Mackerel landings... <em class="text-slate-500">Journal of Marine Systems, 246.</em></p>
+                        <a href="https://doi.org/10.1016/j.jmarsys.2024.104012" target="_blank" rel="noopener noreferrer" class="font-medium text-blue-500 hover:underline">View Publication &rarr;</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <p class="text-slate-600"><strong class="text-slate-800">S. D. Sudhakar</strong>, K. Aditya, R. Lakkaraju. (2025). Investigating Shallow Layer Fine-Tuning in Transfer Learning for Generalization in LES of Turbulent Flows. <em class="text-slate-500">26th Aeronautical Society of India CFD Symposium.</em></p>
+                        <a href="https://www.cfdaesi.com/_files/ugd/d8c898_af5aa8046453482487f27ce96ac662d3.pdf" target="_blank" rel="noopener noreferrer" class="font-medium text-blue-500 hover:underline">View Abstract &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-12">Technical Skills</h2>
+                <div class="max-w-3xl mx-auto">
+                     <h3 class="text-2xl font-semibold text-slate-800 mb-4">Proficiencies</h3>
+                     <div class="flex flex-wrap gap-3 justify-center">
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">Python</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">NumPy</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">PyTorch</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">Pandas</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">TensorFlow</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">Matplotlib</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">C++</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">Java</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">SQL</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">JavaScript</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">MATLAB</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-slate-800 mt-12 mb-4">Developer Tools</h3>
+                     <div class="flex flex-wrap gap-3 justify-center">
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">Git</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">Visual Studio</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">PyCharm</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">IntelliJ</span>
+                        <span class="skill-badge bg-slate-200 text-slate-700 px-4 py-2 rounded-full font-medium">Eclipse</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -206,34 +260,6 @@
         </div>
     </footer>
 
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const header = document.getElementById('header');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        mobileMenu.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A') {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-        
-        // Header shadow on scroll
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('shadow-lg');
-            } else {
-                header.classList.remove('shadow-lg');
-            }
-        });
-    </script>
 </body>
 </html>
+
