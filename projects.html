@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Surya Sudhakar</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- External JavaScript with defer -->
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm transition-shadow duration-300">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-2xl font-bold gradient-text">SDS</a>
+                <div class="flex items-center gap-3 border-l border-slate-200 pl-4">
+                     <a href="https://iisc.ac.in" target="_blank" rel="noopener noreferrer">
+                         <img src="assets/IISc_logo.png" alt="IISc Logo" class="h-9 w-auto" title="Indian Institute of Science">
+                     </a>
+                     <a href="https://iisc.ac.in" target="_blank" rel="noopener noreferrer">
+                         <img src="assets/IISc110.jpg" alt="IISc Main Building" class="h-9 w-auto rounded-md hidden md:block" title="Indian Institute of Science">
+                     </a>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#about" class="text-slate-600 hover:text-blue-500 transition duration-300">About</a>
+                <a href="index.html#experience" class="text-slate-600 hover:text-blue-500 transition duration-300">Experience</a>
+                <a href="projects.html" class="text-blue-500 font-semibold transition duration-300">Projects</a>
+                <a href="index.html#publications" class="text-slate-600 hover:text-blue-500 transition duration-300">Publications</a>
+                <a href="index.html#contact" class="text-slate-600 hover:text-blue-500 transition duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="h-6 w-6 text-slate-800"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white/80 backdrop-blur-md">
+            <a href="index.html#about" class="block py-2 text-slate-600 hover:text-blue-500">About</a>
+            <a href="index.html#experience" class="block py-2 text-slate-600 hover:text-blue-500">Experience</a>
+            <a href="projects.html" class="block py-2 text-blue-500 font-semibold">Projects</a>
+            <a href="index.html#publications" class="block py-2 text-slate-600 hover:text-blue-500">Publications</a>
+            <a href="index.html#contact" class="block py-2 text-slate-600 hover:text-blue-500">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-24 md:pt-32">
+        <section id="projects-hero" class="text-center py-16">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
+                    My <span class="gradient-text">Projects</span>
+                </h1>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto">A detailed look at my work in computational science, machine learning, and engineering.</p>
+            </div>
+        </section>
+
+        <section class="py-16 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="space-y-16 max-w-4xl mx-auto">
+
+                    <!-- Project 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h2 class="text-3xl font-bold mb-3">Transfer Learning for Turbulence Generalization</h2>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-badge text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Python</span>
+                            <span class="skill-badge text-sm bg-red-100 text-red-800 px-3 py-1 rounded-full">TensorFlow</span>
+                            <span class="skill-badge text-sm bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Fluid Dynamics</span>
+                        </div>
+                        <div class="text-slate-600 space-y-4">
+                            <p>This research project focused on enhancing the predictive accuracy of Sub-Grid Scale (SGS) models in turbulence simulations. By implementing transfer learning techniques, the goal was to improve the model's ability to generalize across different turbulent flow conditions without requiring complete retraining.</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Investigated various pre-trained models and fine-tuning strategies to identify the most effective approach for SGS modeling.</li>
+                                <li>Validated the improved model against high-fidelity Direct Numerical Simulation (DNS) data.</li>
+                                <li>The results demonstrated a significant improvement in generalization, allowing for more efficient and accurate Large Eddy Simulations (LES).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h2 class="text-3xl font-bold mb-3">Reacting Flow Solver</h2>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-badge text-sm bg-gray-100 text-gray-800 px-3 py-1 rounded-full">C++</span>
+                            <span class="skill-badge text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Python</span>
+                            <span class="skill-badge text-sm bg-green-100 text-green-800 px-3 py-1 rounded-full">Git</span>
+                             <span class="skill-badge text-sm bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">Combustion</span>
+                        </div>
+                        <div class="text-slate-600 space-y-4">
+                            <p>Developed a high-performance reacting flow solver from scratch in C++ to simulate complex combustion phenomena. The solver is capable of handling both 0D (homogeneous reactor) and 1D (propagating flame) simulations, providing a versatile tool for combustion research.</p>
+                             <ul class="list-disc pl-5 space-y-2">
+                                <li>Implemented a detailed chemical kinetics mechanism involving 9 species and 21 elementary reactions.</li>
+                                <li>Utilized efficient numerical methods for solving stiff ordinary differential equations (ODEs) inherent in combustion chemistry.</li>
+                                <li>The tool is used to study ignition delay, flame speed, and species concentration profiles in various fuel-air mixtures.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h2 class="text-3xl font-bold mb-3">GPU-based DNS N-S Solver</h2>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-badge text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Python</span>
+                            <span class="skill-badge text-sm bg-orange-100 text-orange-800 px-3 py-1 rounded-full">PyTorch</span>
+                            <span class="skill-badge text-sm bg-green-100 text-green-800 px-3 py-1 rounded-full">Git</span>
+                            <span class="skill-badge text-sm bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">HPC</span>
+                        </div>
+                        <div class="text-slate-600 space-y-4">
+                            <p>This project involved the development of a 2D pseudo-spectral solver for Direct Numerical Simulation (DNS) of the Navier-Stokes equations. The primary goal was to simulate the decay of two-dimensional turbulence with high fidelity. A key feature is its implementation in Python with PyTorch, allowing for massive parallelization on GPUs.</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Leveraged the Fast Fourier Transform (FFT) for efficient computation of spatial derivatives in spectral space.</li>
+                                <li>Achieved significant speed-up factors compared to traditional CPU-based solvers by offloading computations to the GPU.</li>
+                                <li>A CPU-compatible fork was also created to enable simulations on HPC clusters that may not have GPU access.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h2 class="text-3xl font-bold mb-3">Two-Phase Flow Heat Transfer Analysis</h2>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-badge text-sm bg-red-100 text-red-800 px-3 py-1 rounded-full">Ansys Fluent</span>
+                            <span class="skill-badge text-sm bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">Matlab</span>
+                            <span class="skill-badge text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">CFD</span>
+                        </div>
+                        <div class="text-slate-600 space-y-4">
+                            <p>As part of my undergraduate thesis, I conducted a comprehensive analysis of heat transfer characteristics in two-phase (liquid-gas) fluid flow within complex geometries. This computational fluid dynamics (CFD) study aimed to understand and quantify heat exchange under various flow regimes.</p>
+                             <ul class="list-disc pl-5 space-y-2">
+                                <li>Utilized the Drift-Flux model in Ansys Fluent, a computationally efficient approach for simulating two-phase flows where phases move at different velocities.</li>
+                                <li>Performed parametric studies to analyze the effects of variables like inlet velocity, volume fraction, and heat flux on the overall heat transfer coefficient.</li>
+                                <li>Post-processed and visualized the simulation data using MATLAB to extract meaningful physical insights.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-500">
+            <p>&copy; 2025 Surya Datta Sudhakar. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
