@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Visualizations - Surya Sudhakar</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- External JavaScript with defer -->
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm transition-shadow duration-300">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="index.html">
+                    <img src="assets/my-photo.jpg" alt="Surya Sudhakar" class="h-9 w-9 rounded-full object-cover">
+                </a>
+                <div class="flex items-center gap-3 border-l border-slate-200 pl-4">
+                     <a href="https://iisc.ac.in" target="_blank" rel="noopener noreferrer">
+                         <img src="assets/IISc_logo.png" alt="IISc Logo" class="h-9 w-auto" title="Indian Institute of Science">
+                     </a>
+                     <a href="https://cds.iisc.ac.in/" target="_blank" rel="noopener noreferrer">
+                         <img src="assets/CDS_Logo_Square.png" alt="CDS Department Logo" class="h-9 w-auto rounded-md hidden md:block" title="CDS Department, Indian Institute of Science">
+                     </a>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#about" class="text-slate-600 hover:text-blue-500 transition duration-300">About</a>
+                <a href="index.html#experience" class="text-slate-600 hover:text-blue-500 transition duration-300">Experience</a>
+                <a href="projects.html" class="text-slate-600 hover:text-blue-500 transition duration-300">Projects</a>
+                <a href="datascienceviz.html" class="text-blue-500 font-semibold transition duration-300">Data Science Viz</a>
+                <a href="index.html#publications" class="text-slate-600 hover:text-blue-500 transition duration-300">Publications</a>
+                <a href="index.html#contact" class="text-slate-600 hover:text-blue-500 transition duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="h-6 w-6 text-slate-800"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white/80 backdrop-blur-md">
+            <a href="index.html#about" class="block py-2 text-slate-600 hover:text-blue-500">About</a>
+            <a href="index.html#experience" class="block py-2 text-slate-600 hover:text-blue-500">Experience</a>
+            <a href="projects.html" class="block py-2 text-slate-600 hover:text-blue-500">Projects</a>
+             <a href="datascienceviz.html" class="block py-2 text-blue-500 font-semibold">Data Science Viz</a>
+            <a href="index.html#publications" class="block py-2 text-slate-600 hover:text-blue-500">Publications</a>
+            <a href="index.html#contact" class="block py-2 text-slate-600 hover:text-blue-500">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-24 md:pt-32">
+        <section id="viz-hero" class="text-center py-16">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
+                    Data Science <span class="gradient-text">Visualizations</span>
+                </h1>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto">Exploring complex datasets and telling stories through visualization. Plots and analyses from various personal and academic projects.</p>
+            </div>
+        </section>
+
+        <section class="py-16 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+                    <!-- Visualization 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover transition duration-300">
+                        <img src="https://placehold.co/600x400/DBEAFE/1E40AF?text=Turbulence+Spectrum" alt="Turbulence Spectrum Plot" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold mb-2">Turbulent Energy Spectrum</h2>
+                            <p class="text-slate-600 mb-4">Analysis of energy cascade in 2D decaying turbulence, plotting the kinetic energy spectrum against wavenumber to verify Kolmogorov's -5/3 law.</p>
+                            <a href="#" class="font-medium text-blue-500 hover:underline">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Visualization 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover transition duration-300">
+                         <img src="https://placehold.co/600x400/D1FAE5/065F46?text=Marine+Energy+Map" alt="Marine Energy Map" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold mb-2">Marine Energy Atlas Heatmap</h2>
+                            <p class="text-slate-600 mb-4">A geospatial heatmap visualizing the potential for marine renewable energy (wave and tidal) across the Indian coastline using satellite and model data.</p>
+                            <a href="#" class="font-medium text-blue-500 hover:underline">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Visualization 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover transition duration-300">
+                         <img src="https://placehold.co/600x400/FEE2E2/991B1B?text=Fish+Catch+Forecast" alt="Fish Catch Forecast Plot" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold mb-2">Fish Catch Time Series Forecast</h2>
+                            <p class="text-slate-600 mb-4">Time series analysis and forecasting of Indian Mackerel landings, comparing ARIMA and LSTM models against historical catch data.</p>
+                            <a href="#" class="font-medium text-blue-500 hover:underline">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Add more visualization cards here as needed -->
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-500">
+            <p>&copy; 2025 Surya Datta Sudhakar. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
