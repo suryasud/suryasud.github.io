@@ -29,7 +29,7 @@
     <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm transition-shadow duration-300">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center gap-4">
-                <a href="#" title="Homepage">
+                <a href="index.html" title="Homepage">
                     <img src="assets/my-photo.jpg" alt="Surya Sudhakar" class="h-9 w-9 rounded-full object-cover">
                 </a>
                 <div class="flex items-center gap-3 border-l border-slate-200 pl-4">
@@ -68,8 +68,8 @@
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
                     <div class="text-center md:text-left">
-                        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
-                            Hi, I'm <span class="gradient-text">Surya Sudhakar</span>
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+                            Hi, I'm <span class="gradient-text whitespace-nowrap">Surya Sudhakar</span>
                         </h1>
                         <p class="text-xl md:text-2xl text-slate-600 mb-8 max-w-xl">An engineer using scientific machine learning to decode complex physical phenomena and build the next generation of computational tools.</p>
                         <div class="flex justify-center md:justify-start items-center space-x-4">
@@ -83,54 +83,22 @@
                         </div>
                     </div>
                     <div class="flex justify-center order-first md:order-last">
-                        <img src="assets/my-photo.jpg" alt="Surya Sudhakar" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-2xl">
+                        <img src="assets/my-photo.jpg" alt="Surya Sudhakar" class="rounded-[2rem] w-72 h-72 md:w-96 md:h-96 object-cover shadow-2xl">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-20">
-            <div class="container mx-auto px-6">
-                 <h2 class="text-4xl font-bold text-center mb-16">About Me</h2>
-                <div class="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mb-16">
-                    <div class="space-y-6 text-lg text-slate-600">
-                        <p>As an engineer focused on solving fundamental scientific problems through code, my mission is to build the next generation of computational tools. I leverage my background in Computational and Data Sciences and my expertise in Scientific Machine Learning to create solutions for high-stakes challenges, whether in the depths of the ocean or at the frontiers of aerospace propulsion.</p>
-                        <p>I am driven by a profound curiosity for how things work, a passion I indulge through continuous learning. When I'm not engineering solutions, I am into star gazing or watching documentaries, falling in awe with the universe's vast complexities. On other days, you can find me exploring new tea shops or stationery.</p>
-                    </div>
-                    <div>
-                         <img src="assets/jetplane.jpg" alt="A modern jet plane in the sky" class="rounded-xl w-full object-cover shadow-lg">
-                    </div>
-                </div>
-                <div class="max-w-4xl mx-auto text-center">
-                    <h3 class="text-3xl font-bold text-slate-800 mb-6">Outside of Code</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-8 max-w-2xl mx-auto">
-                        <div class="flex items-center text-slate-600 text-lg">
-                            <i data-lucide="telescope" class="h-5 w-5 mr-3 text-blue-500 flex-shrink-0"></i>
-                            <span>Star Gazing</span>
-                        </div>
-                        <div class="flex items-center text-slate-600 text-lg">
-                            <i data-lucide="film" class="h-5 w-5 mr-3 text-blue-500 flex-shrink-0"></i>
-                            <span>Documentaries</span>
-                        </div>
-                        <div class="flex items-center text-slate-600 text-lg">
-                            <i data-lucide="coffee" class="h-5 w-5 mr-3 text-blue-500 flex-shrink-0"></i>
-                            <span>Tea Shops</span>
-                        </div>
-                        <div class="flex items-center text-slate-600 text-lg">
-                            <i data-lucide="pen-tool" class="h-5 w-5 mr-3 text-blue-500 flex-shrink-0"></i>
-                            <span>Stationery</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div id="about" class="scroll-mt-20"></div>
 
-        <section id="experience" class="py-20 bg-slate-100">
+        <section id="experience" class="py-20 bg-slate-100 scroll-mt-20">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center mb-16">Experience & Education</h2>
                 <div class="relative max-w-4xl mx-auto pl-8 border-l-2 border-slate-300">
+                    
                     <!-- Education -->
-                    <div class="mb-12 relative timeline-item">
+                    <div class="relative mb-12">
+                        <div class="absolute -left-[41px] top-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-100"></div>
                         <div class="flex items-start gap-6">
                             <div class="flex-shrink-0">
                                 <img src="assets/IISc_logo.png" alt="IISc Logo" class="w-16 h-16 object-contain rounded-md bg-white p-1 shadow-md">
@@ -143,7 +111,8 @@
                         </div>
                     </div>
                      <!-- Experience -->
-                    <div class="mb-12 relative timeline-item">
+                    <div class="relative mb-12">
+                        <div class="absolute -left-[41px] top-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-100"></div>
                          <div class="flex items-start gap-6">
                             <div class="flex-shrink-0">
                                 <img src="assets/incois_logo.jpg" alt="INCOIS Logo" class="w-16 h-16 object-contain rounded-md bg-white p-1 shadow-md">
@@ -160,7 +129,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-12 relative timeline-item">
+                    <div class="relative mb-12">
+                        <div class="absolute -left-[41px] top-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-100"></div>
                         <div class="flex items-start gap-6">
                             <div class="flex-shrink-0">
                                 <img src="assets/tcs_logo.png" alt="TCS Logo" class="w-16 h-16 object-contain rounded-md bg-white p-1 shadow-md">
@@ -178,7 +148,8 @@
                         </div>
                     </div>
                      <!-- Education -->
-                    <div class="mb-12 relative timeline-item">
+                    <div class="relative mb-12">
+                        <div class="absolute -left-[41px] top-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-100"></div>
                         <div class="flex items-start gap-6">
                             <div class="flex-shrink-0">
                                 <img src="assets/Osmania_University_Logo.png" alt="Osmania University Logo" class="w-16 h-16 object-contain rounded-md bg-white p-1 shadow-md">
@@ -191,7 +162,8 @@
                         </div>
                     </div>
                     <!-- Internships -->
-                    <div class="mb-12 relative timeline-item">
+                    <div class="relative mb-12">
+                        <div class="absolute -left-[41px] top-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-100"></div>
                         <div class="flex items-start gap-6">
                              <div class="flex-shrink-0 flex items-center space-x-2">
                                  <img src="assets/BHEL_logo.png" alt="BHEL Logo" class="w-12 h-12 object-contain rounded-md bg-white p-1 shadow-sm">
@@ -208,7 +180,7 @@
             </div>
         </section>
 
-        <section id="projects" class="py-20">
+        <section id="projects" class="py-20 scroll-mt-20">
              <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -272,7 +244,7 @@
             </div>
         </section>
 
-        <section id="publications" class="py-20 bg-slate-100">
+        <section id="publications" class="py-20 bg-slate-100 scroll-mt-20">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center mb-12">Publications</h2>
                 <div class="grid lg:grid-cols-3 gap-12 items-center max-w-6xl mx-auto">
@@ -293,7 +265,7 @@
             </div>
         </section>
 
-        <section id="skills" class="py-20">
+        <section id="skills" class="py-20 scroll-mt-20">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl font-bold mb-12">Technical Skills</h2>
                 <div class="max-w-4xl mx-auto">
@@ -323,12 +295,48 @@
             </div>
         </section>
 
-        <section id="contact" class="contact-bg text-center py-20">
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-4xl font-bold text-center mb-16">A Little More About Me</h2>
+                <div class="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mb-16">
+                    <div class="space-y-6 text-lg text-slate-600">
+                        <p>As an engineer focused on solving fundamental scientific problems through code, my mission is to build the next generation of computational tools. I leverage my background in Computational and Data Sciences and my expertise in Scientific Machine Learning to create solutions for high-stakes challenges, whether in the depths of the ocean or at the frontiers of aerospace propulsion.</p>
+                        <p>I am driven by a profound curiosity for how things work, a passion I indulge through continuous learning. When I'm not engineering solutions, I am into star gazing or watching documentaries, falling in awe with the universe's vast complexities. On other days, you can find me exploring new tea shops or stationery.</p>
+                    </div>
+                    <div>
+                         <img src="assets/jetplane.jpg" alt="A modern jet plane in the sky" class="rounded-xl w-full h-80 object-cover shadow-lg">
+                    </div>
+                </div>
+                <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="text-3xl font-bold text-slate-800 mb-6">Outside of Code</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-8 max-w-2xl mx-auto">
+                        <div class="flex items-center justify-center text-slate-600 text-lg">
+                            <i data-lucide="telescope" class="h-5 w-5 mr-3 text-blue-500 flex-shrink-0"></i>
+                            <span>Star Gazing</span>
+                        </div>
+                        <div class="flex items-center justify-center text-slate-600 text-lg">
+                            <i data-lucide="film" class="h-5 w-5 mr-3 text-blue-500 flex-shrink-0"></i>
+                            <span>Documentaries</span>
+                        </div>
+                        <div class="flex items-center justify-center text-slate-600 text-lg">
+                            <i data-lucide="coffee" class="h-5 w-5 mr-3 text-blue-500 flex-shrink-0"></i>
+                            <span>Tea Shops</span>
+                        </div>
+                        <div class="flex items-center justify-center text-slate-600 text-lg">
+                            <i data-lucide="pen-tool" class="h-5 w-5 mr-3 text-blue-500 flex-shrink-0"></i>
+                            <span>Stationery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-bg text-center py-20 scroll-mt-20">
              <div class="container mx-auto px-6">
                  <h2 class="text-4xl font-bold text-center mb-4">Get In Touch</h2>
                  <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">I'm currently open to new opportunities and collaborations. Feel free to send me an email, and I'll get back to you as soon as possible!</p>
                  <a href="mailto:suryas@iisc.ac.in" class="inline-block bg-blue-500 text-white font-semibold px-10 py-4 rounded-lg hover:bg-blue-600 transition duration-300 shadow-lg text-lg">
-                     Say Hello
+                      Say Hello
                  </a>
             </div>
         </section>
@@ -343,4 +351,5 @@
 
 </body>
 </html>
+
 
