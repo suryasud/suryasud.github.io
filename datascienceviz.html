@@ -73,48 +73,194 @@
             </div>
         </section>
 
-        <section class="py-16 bg-slate-100">
+        <section class="py-16 bg-white">
             <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                 <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold">Analysis of Ministry Budget Allocations for Central Sector Schemes</h2>
+                    <p class="text-lg text-slate-600 mt-2 max-w-3xl mx-auto">An in-depth look at Central Sector Schemes, uncovering spending priorities, hierarchies, and fiscal trends across various ministries.</p>
+                    <div class="mt-8 flex flex-wrap justify-center gap-4">
+                        <a href="https://github.com/suryasud/DS200-data-science-visualizations" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-2 h-5 w-5"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                            View on GitHub
+                        </a>
+                        <a href="https://colab.research.google.com/drive/1eKFF6DK05pREa5zKSmqNgR0JTOH-Ew69?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-gray-800 bg-yellow-400 hover:bg-yellow-500 transition">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor" class="mr-2 h-5 w-5"><path d="M22.531 6.844c-2.25-2.25-5.25-3.5-8.531-3.5-6.609 0-12 5.391-12 12s5.391 12 12 12c3.281 0 6.281-1.25 8.531-3.5 1.125-1.125 2.031-2.438 2.719-3.891l-11.25-3.594-5.047 7.219-3.422-2.391 7.266-10.391 14.125 4.516c.391-1.391.563-2.828.563-4.313 0-3.281-1.25-6.281-3.5-8.531zM11.5 14.672c1.781 0 3.219-1.438 3.219-3.219s-1.438-3.219-3.219-3.219-3.219 1.438-3.219 3.219c0 1.781 1.438 3.219 3.219 3.219z"></path></svg>
+                            Open in Colab
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="bg-slate-100 rounded-xl p-6 mb-16 max-w-4xl mx-auto">
+                    <h3 class="text-xl font-bold text-center mb-4">Quick Navigation</h3>
+                    <div class="flex flex-wrap justify-center gap-x-6 gap-y-3">
+                        <a href="#viz-1" class="font-medium text-blue-600 hover:underline">Top 10 Schemes by Revenue</a>
+                        <a href="#viz-2" class="font-medium text-blue-600 hover:underline">Lowest 10 Schemes by Revenue</a>
+                        <a href="#viz-3" class="font-medium text-blue-600 hover:underline">Capital Spend Correlation</a>
+                        <a href="#viz-4" class="font-medium text-blue-600 hover:underline">Budget Distribution</a>
+                        <a href="#viz-5" class="font-medium text-blue-600 hover:underline">Top Ministries Budget Share</a>
+                    </div>
+                </div>
+
+                <!-- Visualization Sections -->
+                <div class="max-w-7xl mx-auto space-y-20">
 
                     <!-- Visualization 1 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover transition duration-300">
-                        <img src="https://placehold.co/600x400/DBEAFE/1E40AF?text=Turbulence+Spectrum" alt="Turbulence Spectrum Plot" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h2 class="text-2xl font-bold mb-2">Turbulent Energy Spectrum</h2>
-                            <p class="text-slate-600 mb-4">Analysis of energy cascade in 2D decaying turbulence, plotting the kinetic energy spectrum against wavenumber to verify Kolmogorov's -5/3 law.</p>
-                            <a href="#" class="font-medium text-blue-500 hover:underline">View on GitHub &rarr;</a>
+                    <section id="viz-1" class="scroll-mt-24">
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <img src="dataVizImgs/css_highest_revenue_min_BAR_PLOT.png" alt="Top 10 Schemes by Actual Revenue Bar Plot" class="w-full h-auto object-cover">
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4">1. Top 10 Schemes by Revenue (2020-21)</h3>
+                                <div class="space-y-4 text-slate-600">
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-lg">Key Points</h4>
+                                        <ul class="list-disc list-inside mt-2 space-y-1">
+                                            <li><strong>Heavy Budget Concentration:</strong> Consumer Affairs (26.9%), Railways (17.5%), and Defence (17.0%) command 61.4% of the total budget.</li>
+                                            <li><strong>Significant Drop-off:</strong> A sharp decline in allocation occurs after the top three ministries.</li>
+                                            <li><strong>"Other" Category is Small:</strong> The bottom four ministries' combined budget is less than any single top-three ministry.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-lg">Inferences</h4>
+                                        <ul class="list-disc list-inside mt-2 space-y-1">
+                                            <li><strong>Core National Priorities:</strong> Spending is focused on Public Welfare, National Infrastructure, and National Security.</li>
+                                            <li><strong>Clear Spending Hierarchy:</strong> A few ministries receive the lion's share, reflecting their strategic importance.</li>
+                                            <li><strong>Social Sectors Follow Core Infrastructure:</strong> Social sectors have a smaller piece of the pie compared to infrastructure and security.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
 
                     <!-- Visualization 2 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover transition duration-300">
-                         <img src="https://placehold.co/600x400/D1FAE5/065F46?text=Marine+Energy+Map" alt="Marine Energy Map" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h2 class="text-2xl font-bold mb-2">Marine Energy Atlas Heatmap</h2>
-                            <p class="text-slate-600 mb-4">A geospatial heatmap visualizing the potential for marine renewable energy (wave and tidal) across the Indian coastline using satellite and model data.</p>
-                            <a href="#" class="font-medium text-blue-500 hover:underline">View on GitHub &rarr;</a>
+                    <section id="viz-2" class="scroll-mt-24">
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                             <div class="md:order-2">
+                                <img src="dataVizImgs/css_lowest_revenue_min_BAR_PLOT.png" alt="Lowest 10 Schemes by Actual Revenue Bar Plot" class="w-full h-auto object-cover rounded-xl shadow-lg">
+                            </div>
+                            <div class="md:order-1">
+                                <h3 class="text-3xl font-bold mb-4">2. Lowest 10 Schemes by Revenue (2020-21)</h3>
+                                <div class="space-y-4 text-slate-600">
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-lg">Key Points</h4>
+                                        <ul class="list-disc list-inside mt-2 space-y-1">
+                                            <li><strong>Uneven Revenue–Capital Mix:</strong> Most ministries show higher revenue expenditure (operational costs) than capital.</li>
+                                            <li><strong>Capital-Dominant Outliers:</strong> Railways and Defence Services stand out with disproportionately high capital expenditure.</li>
+                                            <li><strong>Log-Scale Emphasis:</strong> The log scale reveals massive differences in spending across ministries.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-lg">Inferences</h4>
+                                        <ul class="list-disc list-inside mt-2 space-y-1">
+                                            <li><strong>Infrastructure-Centric Outliers:</strong> Railways and Defence are driven by capital-heavy projects.</li>
+                                            <li><strong>Operational Overheads:</strong> Smaller departments primarily fund maintenance, salaries, and ongoing programs.</li>
+                                            <li><strong>Fiscal Imbalance:</strong> Steep variance in capital spending signals unequal capacity or necessity for infrastructure.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
 
                     <!-- Visualization 3 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover transition duration-300">
-                         <img src="https://placehold.co/600x400/FEE2E2/991B1B?text=Fish+Catch+Forecast" alt="Fish Catch Forecast Plot" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h2 class="text-2xl font-bold mb-2">Fish Catch Time Series Forecast</h2>
-                            <p class="text-slate-600 mb-4">Time series analysis and forecasting of Indian Mackerel landings, comparing ARIMA and LSTM models against historical catch data.</p>
-                            <a href="#" class="font-medium text-blue-500 hover:underline">View on GitHub &rarr;</a>
+                    <section id="viz-3" class="scroll-mt-24">
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                             <div>
+                                <img src="dataVizImgs/css_correlation_capital_SCATTER_PLOT.png" alt="Correlation between FY21 Capital Spend and FY22 Budget Projections Scatter Plot" class="w-full h-auto object-cover rounded-xl shadow-lg">
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4">3. Capital Spend vs. Future Budget Correlation</h3>
+                                <div class="space-y-4 text-slate-600">
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-lg">Key Points</h4>
+                                        <ul class="list-disc list-inside mt-2 space-y-1">
+                                            <li><strong>Positive Correlation:</strong> Higher capital spending in FY21 correlates with higher budget allocations in FY22.</li>
+                                            <li><strong>Dual Estimate Comparison:</strong> The link is stronger for future capital budgeting than for revenue budgeting.</li>
+                                            <li><strong>Wide Range of Scale:</strong> The log-log scale reveals expenditure spread across seven orders of magnitude.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-lg">Inferences</h4>
+                                        <ul class="list-disc list-inside mt-2 space-y-1">
+                                            <li><strong>Capital Spending Rewards Future Allocation:</strong> Effective use of capital budgets in one year tended to increase allocations for the next.</li>
+                                            <li><strong>Revenue Budgets Less Predictive:</strong> Revenue allocations are influenced more by operational factors than past capital investment.</li>
+                                            <li><strong>Structural Spending Divide:</strong> A tiered budget ecosystem exists where a few ministries dominate capital flows.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
+                    
+                    <!-- Visualization 4 -->
+                    <section id="viz-4" class="scroll-mt-24">
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div class="md:order-2">
+                                <img src="dataVizImgs/css_distribution_of_budget_BAR_PLOT.png" alt="Distribution of Scheme Budgets for Top 20 Ministries Box Plot" class="w-full h-auto object-cover rounded-xl shadow-lg">
+                            </div>
+                            <div class="md:order-1">
+                                <h3 class="text-3xl font-bold mb-4">4. Scheme Budget Distribution (FY 2022–23)</h3>
+                                <div class="space-y-4 text-slate-600">
+                                   <div>
+                                        <h4 class="font-semibold text-slate-800 text-lg">Key Points</h4>
+                                        <ul class="list-disc list-inside mt-2 space-y-1">
+                                            <li><strong>High Variability:</strong> Wide variation in scheme budgets across ministries, especially in Road Transport and Agriculture.</li>
+                                            <li><strong>Log-Scale Spread:</strong> Budgets span from fractions of a crore to nearly ₹10⁵ crores.</li>
+                                            <li><strong>Concentrated vs. Dispersed:</strong> Some ministries have tightly grouped budgets, while others show broader distributions.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-lg">Inferences</h4>
+                                        <ul class="list-disc list-inside mt-2 space-y-1">
+                                            <li><strong>Infrastructure and Agriculture Lead:</strong> Expansive budget ranges reflect their extensive scheme portfolios.</li>
+                                            <li><strong>Strategic and Scientific Stability:</strong> Ministries like Space and Biotechnology show steady, long-term investment.</li>
+                                            <li><strong>Defense and Power Maintain Core Funding:</strong> Controlled yet high allocations underscore their role as essential public services.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-                    <!-- Add more visualization cards here as needed -->
+                    <!-- Visualization 5 -->
+                    <section id="viz-5" class="scroll-mt-24">
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <img src="dataVizImgs/css_top_10_ministries_budget_share_DONUT_CHART.png" alt="Budget Share of Top 10 Ministries Donut Chart" class="w-full h-auto object-cover rounded-xl shadow-lg">
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4">5. Budget Share of Top Ministries (FY 2022-23)</h3>
+                                <div class="space-y-4 text-slate-600">
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-lg">Key Points</h4>
+                                        <ul class="list-disc list-inside mt-2 space-y-1">
+                                            <li>Food & Public Distribution (21.0%) and Road Transport (20.2%) cover over 41% of the budget.</li>
+                                            <li>Defence (15.4%) and Railways (13.9%) also receive significant shares.</li>
+                                            <li>Remaining ministries have much smaller shares, mostly below 11%.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-lg">Inferences</h4>
+                                        <ul class="list-disc list-inside mt-2 space-y-1">
+                                            <li>The budget prioritizes food distribution, transport infrastructure, and defense.</li>
+                                            <li>Specialized ministries like MSME and Labour receive comparatively minor shares.</li>
+                                            <li>A diversified but dominant focus exists on food security, transportation, and defense spending.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-white border-t border-slate-200">
+    <footer class="bg-slate-100 border-t border-slate-200">
         <div class="container mx-auto px-6 py-8 text-center text-slate-500">
             <p>&copy; 2025 Surya Datta Sudhakar. All rights reserved.</p>
         </div>
@@ -122,3 +268,5 @@
 
 </body>
 </html>
+
+
