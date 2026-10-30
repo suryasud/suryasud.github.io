@@ -1,36 +1,12 @@
-// Initialize Lucide icons
-lucide.createIcons();
-
 // Mobile menu toggle
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-const header = document.getElementById('header');
+const btn = document.getElementById('menu');
+const nav = document.querySelector('header nav');
 
-if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
+if (btn && nav) {
+  const set = open => {
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+  };
+  btn.addEventListener('click', () => set(!nav.classList.contains('open')));
+  nav.addEventListener('click', e => { if (e.target.tagName === 'A') set(false); });
 }
-
-
-// Close mobile menu when a navigation link is clicked
-const navLinks = mobileMenu.getElementsByTagName('a');
-for (let link of navLinks) {
-    link.addEventListener('click', () => {
-        if (!mobileMenu.classList.contains('hidden')) {
-             mobileMenu.classList.add('hidden');
-        }
-    });
-}
-    
-// Header shadow on scroll
-window.addEventListener('scroll', () => {
-    if (header) {
-        if (window.scrollY > 50) {
-            header.classList.add('shadow-lg');
-        } else {
-            header.classList.remove('shadow-lg');
-        }
-    }
-});
-
