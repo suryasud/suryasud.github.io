@@ -23,13 +23,7 @@ M.Tech. (Research), Indian Institute of Science, Bengaluru · [suryasud.github.i
 
 - **Aug 2016 – Oct 2020** · B.E., Mechanical Engineering, *Osmania University, Hyderabad*  
   Summer internships at BHEL and AP Power Generation Co.
-
-## Open questions
-
-1. *How much of a messy world can a model honestly capture?*
-2. *What would it take to trust a prediction, and to know when not to?*
-3. *Where does a clever simulation end and understanding begin?*
-4. *Why do some ideas look obvious only after someone draws them?*
+  
 
 ## Outside work
 
