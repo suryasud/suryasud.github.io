@@ -6,17 +6,13 @@ M.Tech. (Research), Indian Institute of Science, Bengaluru · [suryasud.github.i
 
 ---
 
-### Abstract
-
-> I'm an engineer who keeps drifting toward the mathematical side of things: the equations underneath, and the data on top. These days I'm going deeper into statistics, machine learning and data science, from the foundations up. My work so far has been varied: testing telecom firmware, building tools for tsunami early warning, and research in computational science. They look unrelated, and I like that. I'm keeping my options open rather than settling on one corner.
-
 **Keywords:** `statistics` `machine learning` `language models` `computational science` `turbulence` `oceans`
 
 ---
 
-## 1. Background
+## Background
 
-- **2024 – 2026** · M.Tech. (Research), Computational and Data Sciences, *Indian Institute of Science, Bengaluru*  
+- **Aug 2024 – Aug 2026** · M.Tech. (Research), Computational and Data Sciences, *Indian Institute of Science, Bengaluru*  
   How learned models of small-scale turbulence behave when flow conditions change.
 
 - **Dec 2022 – Jul 2024** · Project Scientist, *INCOIS, Ministry of Earth Sciences*  
@@ -25,30 +21,27 @@ M.Tech. (Research), Indian Institute of Science, Bengaluru · [suryasud.github.i
 - **Jan 2021 – Mar 2022** · Assistant Systems Engineer, *Tata Consultancy Services*  
   Modem-firmware testing, working with Qualcomm.
 
-- **2016 – 2020** · B.E., Mechanical Engineering, *Osmania University, Hyderabad*  
+- **Aug 2016 – Oct 2020** · B.E., Mechanical Engineering, *Osmania University, Hyderabad*  
   Summer internships at BHEL and AP Power Generation Co.
 
-## 2. Interests
-
-1. **Statistics and machine learning:** what a model can and can't tell you.
-2. **Language models:** how they work, and where they fall short.
-3. **Computational science:** simulation, turbulence and fast computing.
-4. **Oceans and the night sky:** two places where scale is humbling.
-
-## 3. Open questions
+## Open questions
 
 1. *How much of a messy world can a model honestly capture?*
 2. *What would it take to trust a prediction, and to know when not to?*
 3. *Where does a clever simulation end and understanding begin?*
 4. *Why do some ideas look obvious only after someone draws them?*
 
-## 4. Outside work
+## Outside work
 
-Stargazing · documentaries that make the universe feel enormous · hunting for new tea shops · good stationery
+- Stargazing
+- Documentaries that make the universe feel enormous
+- Hunting for new tea shops
+- Good stationery
+- Philosophy
 
 ---
 
-## References
+## Publications
 
 **[1]** S. D. Sudhakar, K. Aditya, R. Lakkaraju, "Investigating Shallow Layer Fine-Tuning in Transfer Learning for Generalization in LES of Turbulent Flows," *26th Aeronautical Society of India CFD Symposium*, 2025. [Abstract](https://www.cfdaesi.com/_files/ugd/d8c898_af5aa8046453482487f27ce96ac662d3.pdf)
 
